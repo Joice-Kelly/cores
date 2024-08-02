@@ -8,7 +8,7 @@ describe("ColorPanel", () => {
     const blue = 71;
     const alpha = 0.5;
     mount(<ColorPanel red={red} green={green} blue={blue} alpha={alpha} />);
-    cy.get("panel")
+    cy.get('[data-cy="panel"]')
       .should("have.css", "background-color")
       .and("eq", "rgba(255, 99, 71, 0.5)");
   });
